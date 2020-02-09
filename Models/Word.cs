@@ -7,5 +7,8 @@ namespace Dictionary.Models
 {
     public class Word
     {
+        public int id { get; set; }
+        public string englishValue { get; set; }
+        public string russianValue { get; set; }
     }
 }
