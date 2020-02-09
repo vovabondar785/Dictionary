@@ -8,7 +8,7 @@ namespace Dictionary.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult HomePage()
         {
             return View();
         }
