@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <Folder Include="Interfaces\" />
-=======
     <Folder Include="wwwroot\" />
->>>>>>> 46237370cc8e710cd8764607aff46d5b9208b2eb
   </ItemGroup>
 
   <ItemGroup>
