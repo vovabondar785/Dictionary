@@ -16,7 +16,7 @@
         {
             if(@word.ID%2==0)
             {
-        <div class="word">
+        <div class="word" data-id="@word.ID" data-lang="rus" data-cnt="@cnt" data-num="@cnt">
             <div class="num">@cnt</div>
             <p> @word.RussianValue</p>
             <div class="cnt">@cnt</div>
@@ -25,7 +25,7 @@
             }
             else
             {
-    <div class="word">
+    <div class="word" data-id="@word.ID" data-lang="en" data-cnt="@cnt" data-num="@cnt">
         <div class="num">@cnt</div>
         <p>@word.EnglishValue</p>
         <div class="cnt">@cnt</div>
@@ -39,8 +39,10 @@
     <div class="check">
         <form name="check">
             <input type="text" name="value" disabled value="house" />
-            <input type="text" name="translate" value="" />
+            <input type="text" name="translate" autocomplete="off" spellcheck="false" value="" />
         </form>
     </div>
+
+    <script src="Scripts/main.js"></script>
 </body>
 </html>

@@ -13,10 +13,13 @@
 .word {
     margin:20px;
     font-size: 35px;
-    border: 1px solid red;
+    border: 1px solid green;
     display: inline-block;
     text-align: center;
     padding:0px 10px 0px 10px;
+}
+.active {
+    border: 1px solid red;
 }
 
 .word p{
@@ -51,3 +54,18 @@
     font-size: 2vh;
     text-align: center;
 }
+
+input[name="value"]{
+    font-size:30px;
+    position:relative;
+    left:30%;
+    top:30px;
+}
+
+input[name="translate"] {
+    font-size: 30px;
+    position: relative;
+    left: 30%;
+    top: 30px;
+}
+

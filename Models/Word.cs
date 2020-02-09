@@ -8,7 +8,11 @@ namespace Dictionary.Models
     public class Word
     {
         public int ID { get; set; }
+
         public string EnglishValue { get; set; }
+
         public string RussianValue { get; set; }
+
+        public double Value { get; set; }
     }
 }
