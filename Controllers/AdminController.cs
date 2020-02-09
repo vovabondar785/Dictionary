@@ -8,7 +8,7 @@ namespace Dictionary.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
+        public IActionResult AdminPanel()
         {
             return View();
         }
