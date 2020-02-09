@@ -21,19 +21,19 @@ namespace Dictionary.Controllers
             });
             words.Add(new Word
             {
-                ID = 1,
+                ID = 2,
                 RussianValue = "песня",
                 EnglishValue = "song"
             });
             words.Add(new Word
             {
-                ID = 1,
+                ID = 3,
                 RussianValue = "дерево",
                 EnglishValue = "tree"
             });
             words.Add(new Word
             {
-                ID = 1,
+                ID = 4,
                 RussianValue = "дом",
                 EnglishValue = "house"
             });

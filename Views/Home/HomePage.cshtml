@@ -1,20 +1,46 @@
 ﻿@model List<Dictionary.Models.Word>
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Дикшионари</title>
+    <link href="@Url.Content("~/Styles/main.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    @foreach(var word in @Model)
-    {
-        <div>
-            <input type="text" name="english_value" value="@word.EnglishValue" />
-            
-            <input type="text" name="russian_value" value="@word.RussianValue" />
+    <div class="main">
+        @{
+            int cnt=0;
+        }
+        @foreach(var word in @Model)
+        {
+            if(@word.ID%2==0)
+            {
+        <div class="word">
+            <div class="num">@cnt</div>
+            <p> @word.RussianValue</p>
+            <div class="cnt">@cnt</div>
+
         </div>
-    }
+            }
+            else
+            {
+    <div class="word">
+        <div class="num">@cnt</div>
+        <p>@word.EnglishValue</p>
+        <div class="cnt">@cnt</div>
+
+    </div>
+            }
+            cnt++;
+        }
+    </div>
+
+    <div class="check">
+        <form name="check">
+            <input type="text" name="value" disabled value="house" />
+            <input type="text" name="translate" value="" />
+        </form>
+    </div>
 </body>
 </html>
