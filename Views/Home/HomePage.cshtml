@@ -1,0 +1,20 @@
+﻿@model List<Dictionary.Models.Word>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Дикшионари</title>
+</head>
+<body>
+    @foreach(var word in @Model)
+    {
+        <div>
+            <input type="text" name="english_value" value="@word.EnglishValue" />
+            
+            <input type="text" name="russian_value" value="@word.RussianValue" />
+        </div>
+    }
+</body>
+</html>
