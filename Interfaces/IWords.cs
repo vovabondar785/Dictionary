@@ -11,5 +11,6 @@ namespace Dictionary.Interfaces
         public IEnumerable<Word> AllWords { get; }
         public IEnumerable<Word> RandomWords { get; }
         public Word GetWordByID(int wordID);
+        public void AddWord(Word word);
     }
 }

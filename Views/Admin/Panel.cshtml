@@ -2,4 +2,15 @@
     ViewData["Title"] = "AdminPanel";
 }
 
-<h1>AdminPanel</h1>
+<head>
+    <link href="@Url.Content("~/Styles/main.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form action="@Url.Action("AddWord", "Admin")">
+        <div class="admin-panel">
+            <p>Значение слова на английском: <input type="text" id="EnglishValue" /></p>
+            <p>Значение слова на русском: <input type="text" id="RussianValue" /></p>
+            <input type="submit" />
+        </div>
+    </form>
+</body>

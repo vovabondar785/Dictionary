@@ -69,3 +69,9 @@ input[name="translate"] {
     top: 30px;
 }
 
+/* ADMIN PANEL */
+
+.admin-panel {
+    font-size: 22px;
+    margin: 20px;
+}
