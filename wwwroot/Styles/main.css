@@ -70,6 +70,8 @@ input[name="translate"] {
     font-size: 30px;
     position: relative;
     top: 30px;
+<<<<<<< HEAD
+=======
 }
 
 #count {
@@ -83,4 +85,5 @@ input[name="translate"] {
 
 form[name="check"]{
     text-align:center;
+>>>>>>> aa867ab87b9f7129c065f861d6e9b833ab3cff5c
 }
