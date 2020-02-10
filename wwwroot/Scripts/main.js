@@ -112,6 +112,9 @@
         //}
     }
 
+    MovingDiv = () => {
+
+    }
 
     let input = document.querySelector('input[name="translate"]');
     input.focus();
