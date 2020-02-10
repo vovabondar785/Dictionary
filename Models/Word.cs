@@ -13,6 +13,8 @@ namespace Dictionary.Models
 
         public string RussianValue { get; set; }
 
-        public double Value { get; set; }
+        public int ValueEng { get; set; }
+
+        public int ValueRus { get; set; }
     }
 }

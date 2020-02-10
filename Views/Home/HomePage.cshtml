@@ -1,4 +1,4 @@
-﻿@model List<Dictionary.Models.Word>
+﻿@model List<Dictionary.Models.WordReturnModel>
 
 <!DOCTYPE html>
 <html>
@@ -10,27 +10,27 @@
 <body>
     <div class="main">
         @{
-            int cnt=0;
+            int cnt = 0;
         }
-        @foreach(var word in @Model)
+        @foreach (var word in @Model)
         {
-            if(@word.ID%2==0)
+            if (@word.Lang == "rus")
             {
-        <div class="word" data-id="@word.ID" data-lang="rus" data-cnt="@cnt" data-num="@cnt">
-            <div class="num">@cnt</div>
-            <p> @word.RussianValue</p>
-            <div class="cnt">@cnt</div>
+                <div class="word" data-id="@word.Id" data-lang="rus" data-cnt="@word.Cnt" data-num="@cnt">
+                    <div class="num">@cnt</div>
+                    <p> @word.Value</p>
+                    <div class="cnt">@word.Cnt</div>
 
-        </div>
+                </div>
             }
             else
             {
-    <div class="word" data-id="@word.ID" data-lang="en" data-cnt="@cnt" data-num="@cnt">
-        <div class="num">@cnt</div>
-        <p>@word.EnglishValue</p>
-        <div class="cnt">@cnt</div>
+                <div class="word" data-id="@word.Id" data-lang="en" data-cnt="@word.Cnt" data-num="@cnt">
+                    <div class="num">@cnt</div>
+                    <p>@word.Value</p>
+                    <div class="cnt">@word.Cnt</div>
 
-    </div>
+                </div>
             }
             cnt++;
         }
@@ -38,11 +38,13 @@
 
     <div class="check">
         <form name="check">
-            <input type="text" name="value" disabled value="house" />
+            <input type="text" name="value" disabled value="" />
             <input type="text" name="translate" autocomplete="off" spellcheck="false" value="" />
         </form>
     </div>
-
+    <input type="hidden" name="count" value="0" />
+    <label id="count">Ваш счет : 0</label>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/main.js"></script>
 </body>
 </html>
