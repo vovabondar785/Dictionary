@@ -17,20 +17,21 @@ namespace Dictionary.Controllers
         [HttpGet]
         public IActionResult HomePage()
         {
+            words.Clear();
             words.Add(new Word
             {
                 ID=1,
                 RussianValue="слово",
                 EnglishValue="word",
-                ValueEng=1,
-                ValueRus=1
+                ValueEng=2,
+                ValueRus=10
             });
             words.Add(new Word
             {
                 ID = 2,
                 RussianValue = "песня",
                 EnglishValue = "song",
-                ValueEng = 1,
+                ValueEng = 4,
                 ValueRus = 1
             });
             words.Add(new Word
@@ -38,17 +39,18 @@ namespace Dictionary.Controllers
                 ID = 3,
                 RussianValue = "дерево",
                 EnglishValue = "tree",
-                ValueEng = 1,
-                ValueRus = 1
+                ValueEng = 8,
+                ValueRus = 5
             });
             words.Add(new Word
             {
                 ID = 4,
                 RussianValue = "дом",
                 EnglishValue = "house",
-                ValueEng = 1,
-                ValueRus = 1
+                ValueEng = 2,
+                ValueRus = 10
             });
+            list.Clear();
             foreach(var w in words)
             {
                 list.Add(new WordReturnModel
@@ -66,9 +68,7 @@ namespace Dictionary.Controllers
                     Value = w.EnglishValue
                 });
             }
-            var ret = list.GetRange(0, 4);
-            list.RemoveRange(0, 4);
-            return View(ret);
+            return View(list);
         }
 
         public JsonResult Check(int Id,string Lang,string Value)

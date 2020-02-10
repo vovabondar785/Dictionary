@@ -16,5 +16,7 @@ namespace Dictionary.Models
 
         public int Cnt { get; set; }
 
+        public string FontSize { get { return (25 + 5 * Cnt)+"px"; } set { } }
+
     }
 }

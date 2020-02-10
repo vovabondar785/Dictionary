@@ -16,20 +16,18 @@
         {
             if (@word.Lang == "rus")
             {
-                <div class="word" data-id="@word.Id" data-lang="rus" data-cnt="@word.Cnt" data-num="@cnt">
+                <div class="word" style="font-size:@word.FontSize;" data-id="@word.Id" data-lang="rus" data-cnt="@word.Cnt" data-num="@cnt">
                     <div class="num">@cnt</div>
                     <p> @word.Value</p>
                     <div class="cnt">@word.Cnt</div>
-
                 </div>
             }
             else
             {
-                <div class="word" data-id="@word.Id" data-lang="en" data-cnt="@word.Cnt" data-num="@cnt">
+                <div class="word" style="font-size:@word.FontSize;" data-id="@word.Id" data-lang="en" data-cnt="@word.Cnt" data-num="@cnt">
                     <div class="num">@cnt</div>
                     <p>@word.Value</p>
                     <div class="cnt">@word.Cnt</div>
-
                 </div>
             }
             cnt++;

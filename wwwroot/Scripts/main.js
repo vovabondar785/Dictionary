@@ -111,11 +111,55 @@
         //    ChangeLang(e);
         //}
     }
-
-    MovingDiv = () => {
-
+    
+    Div = (div, x, y, cur_x, cur_y) => {
+        let divs = document.querySelectorAll('.word');
+        let values_div = div.getBoundingClientRect();
+        //for (let i = 0; i < divs.length; i++) {
+        //    if (divs[i].getAttribute('data-id') != div.getAttribute('data-id')) {
+        //        let values = divs[i].getBoundingClientRect();
+        //        if (values_div.top <= values.bottom ||
+        //            values_div.right >= values.left ||
+        //            values_div.bottom >= values.top ||
+        //            values_div.left <= values.right) {
+        //            console.log("d");
+        //            x = -x;
+        //            y = -y;
+        //        }
+        //    }
+        //}
+        let values = document.querySelector('.main').getBoundingClientRect();
+        if (values_div.top <= values.top ||
+            values_div.right >= values.right ||
+            values_div.bottom >= values.bottom ||
+            values_div.left <= values.left) {
+            x = -x;
+            y = -y;
+        }
+        div.style.top = cur_x + x + "px";
+        div.style.left = cur_y + y + "px";
+        cur_x += x;
+        cur_y += y;
+        setTimeout(() => { Div(div, x, y, cur_x, cur_y) }, 1);
     }
 
+    MoveDiv = (div) => {
+        let x = 1;
+        let y = 1;
+        div.style.position = "relative";
+        setTimeout(() => {
+            Div(div, 1,1, 0, 0)
+        }, 1);
+    }
+
+    MovingDiv = () => {
+        let divs = document.querySelectorAll('.word');
+        for (let i = 0; i < divs.length; i++) {
+            MoveDiv(divs[i]);
+        }
+
+    }
+    MovingDiv();
     let input = document.querySelector('input[name="translate"]');
     input.focus();
     input.addEventListener('keyup', KeyUp);
